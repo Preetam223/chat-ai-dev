@@ -20,7 +20,7 @@ const __filename=fileURLToPath(import.meta.url)
 const __dirname=path.dirname(__filename);
 // app.use(cookieParser());
 app.use(cors({
-  origin:process.env.CLIENT_URL,
+  origin:process.env.CLIENT_URL.split(","),//allow multiple url
    methods: ["GET", "POST", "PUT", "DELETE"],
   credentials:true,
   
